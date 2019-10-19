@@ -38,13 +38,13 @@ class MainActivityTest<Int1> {
         assertEquals(50, price)
     }
 
-//    @JunitTest
-//    @Throws(Exception::class)
-//    fun priceIsEightyWhenGoodIsA() {
-//        val items = "AB"
-//        val price = price(items)
-//        assertEquals(80, price)
-//    }
+    @JunitTest
+    @Throws(Exception::class)
+    fun priceIsEightyWhenGoodIsA() {
+        val items = "AB"
+        val price = price(items)
+        assertEquals(80, price)
+    }
 
 //    @JunitTest
 //    @Throws(Exception::class)
