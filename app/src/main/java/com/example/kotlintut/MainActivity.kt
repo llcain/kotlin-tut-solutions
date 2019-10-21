@@ -17,11 +17,12 @@ class MainActivity : AppCompatActivity() {
     fun scan (good:Char) {
         println("\nThe character is: " + good)
 
-       if (good == 'A') {
-           totalSoFar = totalSoFar + 50
-       }else {
-           totalSoFar = totalSoFar + 30
-       }
+      when (good) {
+          'A' -> totalSoFar = totalSoFar + 50
+          'B' -> totalSoFar = totalSoFar + 30
+          'C' -> totalSoFar = totalSoFar + 20
+          'D' -> totalSoFar = totalSoFar + 15
+      }
 
     }
 

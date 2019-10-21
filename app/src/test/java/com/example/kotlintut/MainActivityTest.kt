@@ -46,14 +46,14 @@ class MainActivityTest<Int1> {
         assertEquals(80, price)
     }
 
-//    @JunitTest
-//    @Throws(Exception::class)
-//    fun priceIsOneHundredFifteenWhenGoodAreCDBA() {
-//        val items = "CDBA"
-//        val price = price(items)
-//        assertEquals(115, price)
-//    }
-//
+    @JunitTest
+    @Throws(Exception::class)
+    fun priceIsOneHundredFifteenWhenGoodAreCDBA() {
+        val items = "CDBA"
+        val price = price(items)
+        assertEquals(115, price)
+    }
+
 //    //Section 1 ends
 //    //Section 2 starts
 //
