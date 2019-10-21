@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.kotlintut
 
 import org.junit.Assert.*
@@ -5,9 +7,10 @@ import org.junit.rules.ExpectedException
 import com.example.kotlintut.MainActivity as ComExampleKotlintutMainActivity
 import com.example.kotlintut.MainActivityTest as MainActivityTest1
 import org.junit.Test as JunitTest
-import kotlin.Int as Int1
+import kotlin.CharSequence as CharSequence1
 
-class MainActivityTest<Int1> {
+@Suppress("DEPRECATION")
+abstract class MainActivityTest<Int1> {
 
     @JunitTest
     @Throws(Exception::class)
@@ -19,15 +22,17 @@ class MainActivityTest<Int1> {
     }
 
 
-    private fun price(goods: CharSequence): kotlin.Int {
+    private fun price(goods: CharSequence1): kotlin.Int {
         val mainActivityTest = ComExampleKotlintutMainActivity()
         for (i in 0 until goods.length) {
             val good = goods.get(i)
-            mainActivityTest.scan(good)
+            mainActivityTest.run {
+                scan(good)
+            }
 
         }
 
-        return mainActivityTest.total()
+        return mainActivityTest.run { total() }
     }
 
     @JunitTest
@@ -116,16 +121,52 @@ class MainActivityTest<Int1> {
         assertEquals(190, price)
     }
 
-//    @JunitTest
-//    @Throws(Exception::class)
-//    fun priceIsOneHundredNinetyWhenGoodAreDABABA() {
-//        val items = "DABABA"
-//        val price = price(items)
-//        assertEquals(190, price)
-//    }
-//
+    @JunitTest
+    @Throws(Exception::class)
+    fun priceIsOneHundredNinetyWhenGoodAreDABABA() {
+        val items = "DABABA"
+        val price = price(items)
+        assertEquals(190, price)
+    }
+
 //    //Section 3 ends
 //    //Section 4 starts
+
+    @JunitTest
+    @Throws( ArithmeticException::class)
+    abstract fun totalIncrementsAccordingToPricePlanPerScan()
+
+    internal constructor()val mainActivity = com.example.kotlintut.MainActivity()
+    abstract fun assertEquals(expectedException: ExpectedException)
+    constructor (this: MainActivityTest1 scan(goods: kotlin.CharSequence))
+    mainActivityTest.total()
+    mainActivityTest.scan(good)
+    'A'
+    assertEquals(expected)
+    50
+    mainActivity.total()
+    mainActivityTest.scan(good)
+    'B'
+    assertEquals(expected)
+    80
+    mainActivityTest.total()
+    mainActivityTest.scan(good)
+    'A'
+    assertEquals(good)
+    130
+    mainActivityTest.total()
+    mainActivityTest.scan(good)
+    'A'
+    assertEquals(good)
+    160
+    mainActivityTest.total()
+    mainActivityTest.scan(good)
+    'B'
+    assertEquals(good)
+    175
+    mainActivityTest.total()
+
+}
 
 
 
