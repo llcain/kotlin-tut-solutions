@@ -7,7 +7,7 @@ class MainActivity : AppCompatActivity() {
 
     internal var totalSoFar = 0
 
-     //internal var myACounter = 0
+     internal var myACounter = 0
      //internal var myBCounter = 0
 
     fun total():Int {
@@ -18,7 +18,18 @@ class MainActivity : AppCompatActivity() {
         println("\nThe character is: " + good)
 
       when (good) {
-          'A' -> totalSoFar = totalSoFar + 50
+          'A' -> {
+              myACounter = myACounter + 1
+              if (myACounter === 3)
+              {
+                  totalSoFar = totalSoFar + 30
+                  myACounter = 0
+              }
+              else
+              {
+                  totalSoFar = totalSoFar + 50
+              }
+          }
           'B' -> totalSoFar = totalSoFar + 30
           'C' -> totalSoFar = totalSoFar + 20
           'D' -> totalSoFar = totalSoFar + 15

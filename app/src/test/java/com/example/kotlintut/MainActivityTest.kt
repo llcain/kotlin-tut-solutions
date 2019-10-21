@@ -57,22 +57,22 @@ class MainActivityTest<Int1> {
 //    //Section 1 ends
 //    //Section 2 starts
 //
-//    @JunitTest
-//    @Throws(Exception::class)
-//    fun priceIsOneHundredWhenGoodAreAA() {
-//        val items = "AA"
-//        val price = price(items)
-//        assertEquals(100, price)
-//    }
-//
-//    @JunitTest
-//    @Throws(Exception::class)
-//    fun priceIsOneHundredThirtyWhenGoodAreAAA() {
-//        val items = "AAA"
-//        val price = price(items)
-//        assertEquals(130, price)
-//    }
-//
+    @JunitTest
+    @Throws(Exception::class)
+    fun priceIsOneHundredWhenGoodAreAA() {
+        val items = "AA"
+        val price = price(items)
+        assertEquals(100, price)
+    }
+
+    @JunitTest
+    @Throws(Exception::class)
+    fun priceIsOneHundredThirtyWhenGoodAreAAA() {
+        val items = "AAA"
+        val price = price(items)
+        assertEquals(130, price)
+    }
+
 //    @JunitTest
 //    @Throws(Exception::class)
 //    fun priceIsOneHundredEightyWhenGoodAreAAAA() {
