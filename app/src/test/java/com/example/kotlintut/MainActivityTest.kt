@@ -73,49 +73,49 @@ class MainActivityTest<Int1> {
         assertEquals(130, price)
     }
 
-//    @JunitTest
-//    @Throws(Exception::class)
-//    fun priceIsOneHundredEightyWhenGoodAreAAAA() {
-//        val items = "AAAA"
-//        val price = price(items)
-//        assertEquals(180, price)
-//    }
-//
-//    @JunitTest
-//    @Throws(Exception::class)
-//    fun priceIsTwoHundredThirtyWhenGoodAreAAAAA() {
-//        val items = "AAAAA"
-//        val price = price(items)
-//        assertEquals(230, price)
-//    }
-//
-//    @JunitTest
-//    @Throws(Exception::class)
-//    fun priceIsTwoHundredSixtyWhenGoodAreAAAAAA() {
-//        val items = "AAAAAA"
-//        val price = price(items)
-//        assertEquals(260, price)
-//    }
-//
+    @JunitTest
+    @Throws(Exception::class)
+    fun priceIsOneHundredEightyWhenGoodAreAAAA() {
+        val items = "AAAA"
+        val price = price(items)
+        assertEquals(180, price)
+    }
+
+    @JunitTest
+    @Throws(Exception::class)
+    fun priceIsTwoHundredThirtyWhenGoodAreAAAAA() {
+        val items = "AAAAA"
+        val price = price(items)
+        assertEquals(230, price)
+    }
+
+    @JunitTest
+    @Throws(Exception::class)
+    fun priceIsTwoHundredSixtyWhenGoodAreAAAAAA() {
+        val items = "AAAAAA"
+        val price = price(items)
+        assertEquals(260, price)
+    }
+
 //    //Section 2 ends
 //    //Section 3 begins
 //
-//    @JunitTest
-//    @Throws(Exception::class)
-//    fun priceIsOneHundredSixtyWhenGoodAreAAAB() {
-//        val items = "AAAB"
-//        val price = price(items)
-//        assertEquals(160, price)
-//    }
-//
-//    @JunitTest
-//    @Throws(Exception::class)
-//    fun priceIsOneHundredNinetyWhenGoodAreAAABBD() {
-//        val items = "AAABBD"
-//        val price = price(items)
-//        assertEquals(190, price)
-//    }
-//
+    @JunitTest
+    @Throws(Exception::class)
+    fun priceIsOneHundredSixtyWhenGoodAreAAAB() {
+        val items = "AAAB"
+        val price = price(items)
+        assertEquals(160, price)
+    }
+
+    @JunitTest
+    @Throws(Exception::class)
+    fun priceIsOneHundredNinetyWhenGoodAreAAABBD() {
+        val items = "AAABBD"
+        val price = price(items)
+        assertEquals(190, price)
+    }
+
 //    @JunitTest
 //    @Throws(Exception::class)
 //    fun priceIsOneHundredNinetyWhenGoodAreDABABA() {
