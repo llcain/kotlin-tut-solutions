@@ -2,6 +2,8 @@
 
 package com.example.kotlintut
 
+import android.os.Parcel
+import android.os.Parcelable
 import org.junit.Assert.*
 import org.junit.rules.ExpectedException
 import com.example.kotlintut.MainActivity as ComExampleKotlintutMainActivity
@@ -10,7 +12,8 @@ import org.junit.Test as JunitTest
 import kotlin.CharSequence as CharSequence1
 
 @Suppress("DEPRECATION")
-abstract class MainActivityTest<Int1> {
+ class MainActivityTest<Int1>() {
+
 
     @JunitTest
     @Throws(Exception::class)
@@ -26,13 +29,11 @@ abstract class MainActivityTest<Int1> {
         val mainActivityTest = ComExampleKotlintutMainActivity()
         for (i in 0 until goods.length) {
             val good = goods.get(i)
-            mainActivityTest.run {
-                scan(good)
-            }
+            mainActivityTest.scan(good)
 
         }
 
-        return mainActivityTest.run { total() }
+        return mainActivityTest.total()
     }
 
     @JunitTest
@@ -62,131 +63,108 @@ abstract class MainActivityTest<Int1> {
 //    //Section 1 ends
 //    //Section 2 starts
 //
-    @JunitTest
-    @Throws(Exception::class)
-    fun priceIsOneHundredWhenGoodAreAA() {
-        val items = "AA"
-        val price = price(items)
-        assertEquals(100, price)
-    }
-
-    @JunitTest
-    @Throws(Exception::class)
-    fun priceIsOneHundredThirtyWhenGoodAreAAA() {
-        val items = "AAA"
-        val price = price(items)
-        assertEquals(130, price)
-    }
-
-    @JunitTest
-    @Throws(Exception::class)
-    fun priceIsOneHundredEightyWhenGoodAreAAAA() {
-        val items = "AAAA"
-        val price = price(items)
-        assertEquals(180, price)
-    }
-
-    @JunitTest
-    @Throws(Exception::class)
-    fun priceIsTwoHundredThirtyWhenGoodAreAAAAA() {
-        val items = "AAAAA"
-        val price = price(items)
-        assertEquals(230, price)
-    }
-
-    @JunitTest
-    @Throws(Exception::class)
-    fun priceIsTwoHundredSixtyWhenGoodAreAAAAAA() {
-        val items = "AAAAAA"
-        val price = price(items)
-        assertEquals(260, price)
-    }
+//    @JunitTest
+//    @Throws(Exception::class)
+//    fun priceIsOneHundredWhenGoodAreAA() {
+//        val items = "AA"
+//        val price = price(items)
+//        assertEquals(100, price)
+//    }
+//
+//    @JunitTest
+//    @Throws(Exception::class)
+//    fun priceIsOneHundredThirtyWhenGoodAreAAA() {
+//        val items = "AAA"
+//        val price = price(items)
+//        assertEquals(130, price)
+//    }
+//
+//    @JunitTest
+//    @Throws(Exception::class)
+//    fun priceIsOneHundredEightyWhenGoodAreAAAA() {
+//        val items = "AAAA"
+//        val price = price(items)
+//        assertEquals(180, price)
+//    }
+//
+//    @JunitTest
+//    @Throws(Exception::class)
+//    fun priceIsTwoHundredThirtyWhenGoodAreAAAAA() {
+//        val items = "AAAAA"
+//        val price = price(items)
+//        assertEquals(230, price)
+//    }
+//
+//    @JunitTest
+//    @Throws(Exception::class)
+//    fun priceIsTwoHundredSixtyWhenGoodAreAAAAAA() {
+//        val items = "AAAAAA"
+//        val price = price(items)
+//        assertEquals(260, price)
+//    }
 
 //    //Section 2 ends
 //    //Section 3 begins
 //
-    @JunitTest
-    @Throws(Exception::class)
-    fun priceIsOneHundredSixtyWhenGoodAreAAAB() {
-        val items = "AAAB"
-        val price = price(items)
-        assertEquals(160, price)
-    }
-
-    @JunitTest
-    @Throws(Exception::class)
-    fun priceIsOneHundredNinetyWhenGoodAreAAABBD() {
-        val items = "AAABBD"
-        val price = price(items)
-        assertEquals(190, price)
-    }
-
-    @JunitTest
-    @Throws(Exception::class)
-    fun priceIsOneHundredNinetyWhenGoodAreDABABA() {
-        val items = "DABABA"
-        val price = price(items)
-        assertEquals(190, price)
-    }
+//    @JunitTest
+//    @Throws(Exception::class)
+//    fun priceIsOneHundredSixtyWhenGoodAreAAAB() {
+//        val items = "AAAB"
+//        val price = price(items)
+//        assertEquals(160, price)
+//    }
+//
+//    @JunitTest
+//    @Throws(Exception::class)
+//    fun priceIsOneHundredNinetyWhenGoodAreAAABBD() {
+//        val items = "AAABBD"
+//        val price = price(items)
+//        assertEquals(190, price)
+//    }
+//
+//    @JunitTest
+//    @Throws(Exception::class)
+//    fun priceIsOneHundredNinetyWhenGoodAreDABABA() {
+//        val items = "DABABA"
+//        val price = price(items)
+//        assertEquals(190, price)
+//    }
 
 //    //Section 3 ends
 //    //Section 4 starts
 
-    @JunitTest
-    @Throws( ArithmeticException::class)
-    abstract fun totalIncrementsAccordingToPricePlanPerScan()
-
-    internal constructor()val mainActivity = com.example.kotlintut.MainActivity()
-    abstract fun assertEquals(expectedException: ExpectedException)
-    constructor (this: MainActivityTest1 scan(goods: kotlin.CharSequence))
-    mainActivityTest.total()
-    mainActivityTest.scan(good)
-    'A'
-    assertEquals(expected)
-    50
-    mainActivity.total()
-    mainActivityTest.scan(good)
-    'B'
-    assertEquals(expected)
-    80
-    mainActivityTest.total()
-    mainActivityTest.scan(good)
-    'A'
-    assertEquals(good)
-    130
-    mainActivityTest.total()
-    mainActivityTest.scan(good)
-    'A'
-    assertEquals(good)
-    160
-    mainActivityTest.total()
-    mainActivityTest.scan(good)
-    'B'
-    assertEquals(good)
-    175
-    mainActivityTest.total()
+//    @JunitTest
+//    fun `getTotalSoFar$app`() {
+//
+//    }
+//
+//    @JunitTest
+//    fun `setTotalSoFar$app`() {
+//
+//    }
+//
+//    @JunitTest
+//    fun total() {
+//
+//    }
+//
+//    @JunitTest
+//    fun scan() {
+//
+//    }
 
 }
 
 
 
-@JunitTest
-    fun `getTotalSoFar$app`() {
-    }
-
-    @JunitTest
-    fun `setTotalSoFar$app`() {
-    }
-
-    @JunitTest
-    fun total() {
-    }
-
-    @JunitTest
-    fun scan() {
-    }
 
 
-}
+
+
+
+
+
+
+
 
 
