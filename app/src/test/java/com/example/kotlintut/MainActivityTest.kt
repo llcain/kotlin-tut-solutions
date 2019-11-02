@@ -122,13 +122,13 @@ import kotlin.CharSequence as CharSequence1
         assertEquals(190, price)
     }
 
-//    @JunitTest
-//    @Throws(Exception::class)
-//    fun priceIsOneHundredNinetyWhenGoodAreDABABA() {
-//        val items = "DABABA"
-//        val price = price(items)
-//        assertEquals(190, price)
-//    }
+    @JunitTest
+    @Throws(Exception::class)
+    fun priceIsOneHundredNinetyWhenGoodAreDABABA() {
+        val items = "DABABA"
+        val price = price(items)
+        assertEquals(190, price)
+    }
 
 //    //Section 3 ends
 //    //Section 4 starts
