@@ -87,14 +87,14 @@ import kotlin.CharSequence as CharSequence1
         assertEquals(180, price)
     }
 
-//    @JunitTest
-//    @Throws(Exception::class)
-//    fun priceIsTwoHundredThirtyWhenGoodAreAAAAA() {
-//        val items = "AAAAA"
-//        val price = price(items)
-//        assertEquals(230, price)
-//    }
-//
+    @JunitTest
+    @Throws(Exception::class)
+    fun priceIsTwoHundredThirtyWhenGoodAreAAAAA() {
+        val items = "AAAAA"
+        val price = price(items)
+        assertEquals(230, price)
+    }
+
 //    @JunitTest
 //    @Throws(Exception::class)
 //    fun priceIsTwoHundredSixtyWhenGoodAreAAAAAA() {
